@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "OpenCode plugin that logs session transcripts to SQLite",
   "license": "MIT",
+  "engines": { "opencode": ">=1.18.3" },
   "keywords": [
     "opencode",
     "opencode-plugin",

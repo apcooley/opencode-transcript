@@ -2,7 +2,7 @@ import { Database } from "bun:sqlite"
 import { mkdirSync } from "node:fs"
 import { join } from "node:path"
 import { homedir } from "node:os"
-import type { Plugin } from "@opencode-ai/plugin"
+import type { Plugin, PluginModule } from "@opencode-ai/plugin"
 import type { Message, Part, Session, TextPart, ToolPart } from "@opencode-ai/sdk"
 
 export type { Database } from "bun:sqlite"
@@ -250,3 +250,5 @@ export const OpencodeTranscript: Plugin = async (input, options) => {
     },
   }
 }
+
+export default { id: "opencode-transcript", server: OpencodeTranscript } satisfies PluginModule

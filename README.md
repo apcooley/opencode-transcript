@@ -22,6 +22,20 @@ Register it in your `opencode.jsonc` using the `[name, options]` tuple form:
 }
 ```
 
+### Local development
+
+Before this package is published, load it from a local checkout by pointing the plugin entry at the repo path (opencode resolves a `file:` or absolute-path spec as a file plugin and reads `package.json` for the entrypoint):
+
+```jsonc
+{
+  "plugin": [
+    ["/absolute/path/to/opencode-transcript", { "timezone": "America/Toronto" }]
+  ]
+}
+```
+
+Rebuild after source changes (`npm run build`) — opencode loads `dist/index.js` as declared in `package.json`.
+
 ## Options
 
 | Option               | Type      | Default                                       | Description                                                              |
